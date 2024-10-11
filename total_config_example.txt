@@ -1,0 +1,32 @@
+######### Personal Settings #########
+# 사용자의 개인 설정 값을 입력하세요
+# 입력을 시작 할 경우 보안을 위해 파일명을 먼저 변경하세요.
+# total_config_example.txt -> total_config.txt
+# total_config.txt 로 작명을 해야 gitignore 대상입니다.
+
+git_token="YOUR GITHUB PAT HERE" # required for github, argocd_application projects
+git_owner="REPOSITORY OWNER HERE" # required for github, argocd_application projects
+git_name="YOUR GITHUB USER NAME HERE" # required for github, argocd_application projects
+git_email="YOUR GITHUB EMAIL HERE" # required for github project
+
+repo_addr=(
+  "git@github.com:OWNER_NAME_HERE/APP_REPO_NAME_HERE.git"
+  "git@github.com:OWNER_NAME_HERE/MANIFEST_REPO_NAME_HERE.git"
+)
+
+bastion_key_name="YOUR SSH KEY NAME HERE" # required for eks project
+access_key="YOUR AWS ACCESS KEY HERE" # required for eks project
+secret_key="YOUR AWS SECRET KEY HERE" # required for eks project
+
+db_username="YOUR DB USER NAME HERE" # "admin" for our case
+db_password="YOURR DB PASSWORD HERE" # "mariapass" for our case
+
+######### General Settings #########
+# 이 파트는 특별한 목적이 없다면 수정할 필요가 없습니다.
+# 임의 수정 시 예기치 못한 에러가 발생할 수 있습니다.
+
+# path settings
+terraform_root="../terraform"
+gitaction_ecr_root="../gitaction-ecr"
+target_repo=("app" "manifest")
+total_config="./total_config.txt"
